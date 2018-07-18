@@ -1,7 +1,16 @@
-{% extends 'blog/base.html'%}
-{%block main%}
+{% extends 'blog/base1.html'%}
+{%block search%}
+<form action="/search/" method="get">
+    <div class="row">
+        <div class="col-xs-8">
+            <input class="form-control" type="text" name="q">
+        </div>
+        <div class="col-xs-4">
+            <button class="btn btn-primary" type="submit" >Search</button>
+        </div>
+    </div>
+</form>
+<p >搜索功能建设中，敬请期待！</p>
 
-<p >{{message}}</p>
 
-
-{% endblock main%}
+{% endblock %}

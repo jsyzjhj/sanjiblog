@@ -1,6 +1,6 @@
 {%extends 'blog/base1.html'%}
 {% block article%}
-{% for post in posts%}
+{% for post in post_list%}
     <article class="post post-1">
         <header class="entry-header">
             <h1 class="entry-title">
@@ -26,26 +26,3 @@
 暂无新文章
 {% endfor %}
 {% endblock article%}
-{% block page%}
-<!-- 简单分页效果
-<div class="pagination-simple">
-    <a href="#">上一页</a>
-    <span class="current">第 6 页 / 共 11 页</span>
-    <a href="#">下一页</a>
-</div>
-
-<div class="pagination" align="center">
-    <ul>
-        <li><a href="">1</a></li>
-        <li><a href="">...</a></li>
-        <li><a href="">4</a></li>
-        <li><a href="">5</a></li>
-        <li class="current"><a href="">6</a></li>
-        <li><a href="">7</a></li>
-        <li><a href="">8</a></li>
-        <li><a href="">...</a></li>
-        <li><a href="">11</a></li>
-    </ul>
-</div>
--->
-{% endblock%}

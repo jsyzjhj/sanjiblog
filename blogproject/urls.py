@@ -20,6 +20,7 @@ from django.conf.urls import url,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'',include('blog.urls')),
-    url(r'',include('search.urls'))
+    url(r'',include('search.urls')),
+    url(r'',include('comment.urls'))
 
 ]
