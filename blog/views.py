@@ -21,3 +21,5 @@ def detail(request,pk):
     context={'post':post}
     obj=render(request,'blog/detail.html',context=context)
     return obj
+
+

@@ -16,8 +16,8 @@ class Tag(models.Model):
 class Post(models.Model):
     title= models.CharField(max_length=200)
     body = models.TextField()
-    create_time= models.DateTimeField()
-    modify_time= models.DateTimeField()
+    create_time= models.DateTimeField(auto_now_add=True)
+    modify_time= models.DateTimeField(auto_now=True)
     excerpt= models.CharField(max_length=200,blank=True)
     tags= models.ManyToManyField(Tag,blank=True)
     category= models.ForeignKey(Category,on_delete=models.DO_NOTHING)

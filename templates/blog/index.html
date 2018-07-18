@@ -1,20 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>sanji blog</title>
-    <style type="text/css">
-        h1 {color: red ;text-align:center}
-        p {color: green;text-align:center }
-    </style>
-</head>
-<body>
+{%extends 'blog/base1.html'%}
+{% block main%}
 {% for post in posts%}
-    <h1 > <a href="{{post.get_absolute_url}}"> {{ post.title}}</a></h1>
-    <p> {{post.body|safe}}
-    </p>
+
+
+
+<header class="entry-header">
+    <h1 class="entry-title">
+        <a href="{{post.get_absolute_url}}">{{post.title}}</a>
+    </h1>
+    <div class="entry-meta">
+        <span class="post-author"><a href="#">{{post.author}}</a></span>
+        <span class="post-date"><a href="#">{{post.create_time}}</a></span>
+        <span class="comments-link"><a href="#">4 评论</a></span>
+        <span class="views-count"><a href="#">588 阅读</a></span>
+        <span class="post-category"><a href="#">{{post.category}}</a></span>
+    </div>
+</header>
+<div class="entry-content clearfix">
+    <p><a href="{{post.get_absolute_url}}">{{post.excerpt}}</a> </p>
+    <div class="read-more cl-effect-14">
+        <a href="{{post.get_absolute_url}}" class="more-link">阅读全文 <span class="meta-nav">→</span></a>
+    </div>
+</div>
+
 {% empty%}
 暂无新文章
 {% endfor %}
-</body>
-</html>
+{% endblock main%}

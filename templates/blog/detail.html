@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sanji blog</title>
-    <style type="text/css">
-        h1 {color: DarkSlateGray ;text-align:center}
-        p {background-color:AliceBlue;color: DimGray;text-align:center }
-    </style>
-</head>
-<body>
-    <h1> {{post.title}}</h1>
-    <p> {{post.body|safe}}</p>
+{% extends 'blog/base.html'%}
+h1 {
+font-family: Lobster, Monospace;
+}
+{%block main%}
+<article class="post-body">
+    <h1 class="top-gap-0"> {{post.title}}</h1>
+    <p class="top-gap-big"> {{post.body|safe}}</p>
+</article>
 
-</body>
-</html>
+
+{% endblock main%}

@@ -25,7 +25,7 @@ SECRET_KEY = 't*b_8fn25k*nq&uxpo%+*+zc3p(j_p!=c5n*wovc&970__#%vx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0','192.168.122.79','127.0.0.1']
+ALLOWED_HOSTS = ['*','192.168.122.79','127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'search',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +120,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
