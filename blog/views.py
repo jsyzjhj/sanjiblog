@@ -22,10 +22,11 @@ def detail(request,pk):
                                 ])
     form=CommentForm()
     comment_list=post.comment_set.all()
-
+    num_comment=len(comment_list)
     context={'post':post,
              'form':form,
-             'comment_list':comment_list}
+             'comment_list':comment_list,
+             'num_comment':num_comment}
     obj=render(request,'blog/detail.html',context=context)
     return obj
 

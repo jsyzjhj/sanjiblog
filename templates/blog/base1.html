@@ -110,7 +110,7 @@
                         <li>
                             <p align="center">
                             <a href="{% url 'blog:category' cat.pk %}">{{cat.name}}
-                                <span class="post-count">(13)</span>
+                                <span class="post-count">{{cat.num_posts}}</span>
                             </a>
                             </p>
                         </li>
