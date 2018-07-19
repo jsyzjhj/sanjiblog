@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+import markdown
+from django.utils.html import strip_tags
 
 # Create your models here.
 class Category(models.Model):
@@ -22,6 +24,7 @@ class Post(models.Model):
     tags= models.ManyToManyField(Tag,blank=True)
     category= models.ForeignKey(Category,on_delete=models.DO_NOTHING)
     author= models.ForeignKey(User,on_delete=models.DO_NOTHING)
+    views = models.PositiveIntegerField(default=0)
 
     def get_absolute_url(self):
         obj=reverse('blog:detail',kwargs={'pk':self.pk})
@@ -29,3 +32,16 @@ class Post(models.Model):
 
     class Meta:
         ordering = ['-create_time']
+
+    def increase_views(self):
+        self.views += 1
+        self.save(update_fields=['views'])
+
+    def save(self, *args, **kwargs):
+        if not self.excerpt:
+            md = markdown.Markdown(extensions=[
+                'markdown.extensions.extra',
+                'markdown.extensions.codehilite',
+            ])
+            self.excerpt = strip_tags(md.convert(self.body))[:100]
+        super(Post, self).save(*args, **kwargs)
