@@ -11,6 +11,10 @@ def index(request):
     obj=render(request,'blog/index.html',context=context)
     return obj
 
+def about(request):
+    obj=render(request,'blog/about.html')
+    return obj
+
 def detail(request,pk):
     post=get_object_or_404(Post,pk=pk)
     post.increase_views()
