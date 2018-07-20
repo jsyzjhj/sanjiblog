@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- css -->
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="{% static 'admin/ext/css/pace.css' %}">
     <link rel="stylesheet" href="{% static 'admin/ext/css/custom.css' %}">
@@ -74,41 +75,41 @@
             {% endblock %}
             </main>
             <aside class="col-md-4">
-                <div class="widget widget-recent-posts">
-                    <h3 class="widget-title" align="center">最新文章</h3>
+                <div >
+                    <h3 class="widget-title" >最新文章</h3>
                     {% get_recent_posts as posts %}
                     <ul>
                         {% for post in posts%}
                         <li>
-                            <p align="center" > <a href="{{post.get_absolute_url}}">{{post.title}}</a></p>
+                            <p> <a href="{{post.get_absolute_url}}">{{post.title}}</a></p>
                         </li>
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="widget widget-archives">
-                    <h3 class="widget-title" align="center">归档</h3>
-                    {% get_archives as Archive%}
-                    <ul>
-                        {% for date in Archives%}
-                        <li>
-                          <p align="center"> <a href="{% url 'blog:archives' date.year date.month %}">
-                              {{ date.year }} 年 {{ date.month }} 月</a></p>
-                        </li>
-                        {% empty %}
-                        <p align="center"> 暂无归档！</p>
-                        {% endfor %}
-                    </ul>
-                </div>
+                <!--<div class="widget widget-archives">-->
+                    <!--<h3 class="widget-title" align="center">归档</h3>-->
+                    <!--{% get_archives as Archive%}-->
+                    <!--<ul>-->
+                        <!--{% for date in Archives%}-->
+                        <!--<li>-->
+                          <!--<p align="center"> <a href="{% url 'blog:archives' date.year date.month %}">-->
+                              <!--{{ date.year }} 年 {{ date.month }} 月</a></p>-->
+                        <!--</li>-->
+                        <!--{% empty %}-->
+                        <!--<p align="center"> 暂无归档！</p>-->
+                        <!--{% endfor %}-->
+                    <!--</ul>-->
+                <!--</div>-->
 
-                <div class="widget widget-category">
-                    <h3 class="widget-title" align="center">分类</h3>
+                <div >
+                    <h3 class="widget-title" >   分类</h3>
                     {% get_categories as categories%}
                     <ul>
                         {% for cat in categories%}
                         <li>
-                            <p align="center">
+                            <p >
                             <a href="{% url 'blog:category' cat.pk %}">{{cat.name}}
-                                <span class="post-count">{{cat.num_posts}}</span>
+                                <span class="post-count">({{cat.num_posts}})</span>
                             </a>
                             </p>
                         </li>

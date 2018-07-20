@@ -2,6 +2,7 @@ from django.db import models
 # Create your models here.
 
 class Comment(models.Model):
+    #parent_comment=models.ForeignKey('Comment',on_delete=models.DO_NOTHING)
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=255)
     text = models.TextField()

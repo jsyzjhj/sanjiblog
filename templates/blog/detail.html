@@ -1,5 +1,6 @@
 {% extends 'blog/base1.html'%}
 {%block article %}
+
 <article class="post post-{{post.pk}}">
     <header class="entry-header">
         <h1 class="entry-title">{{post.title}}</h1>
@@ -17,24 +18,27 @@
 </article>
 <section class="comment-area" id="comment-area">
     <hr>
-    <h3>发表评论</h3>
+    <h3>有话憋不住</h3>
     <form action="{% url 'comment:post_comment' post.pk %}" method="post" class="comment-form">
         <div class="row">
-            <div class="col-md-6">
-                <label for="{{ form.name.id_for_label }}">名字：</label>
-                {{ form.name }}
-                {{ form.name.errors }}
+            <div class="col-xs-12">
+                <!--<label for="{{ form.name.id_for_label }}">名字：</label>-->
+                <!--{{ form.name }}-->
+                <!--{{ form.name.errors }}-->
+                <input name="name" class="form-control input-control clearfix" placeholder="昵称:(*)">
             </div>
-            <div class="col-md-6">
-                <label for="{{ form.email.id_for_label }}">邮箱：</label>
-                {{ form.email }}
-                {{ form.email.errors }}
+            <div class="col-xs-12">
+                <!--<label for="{{ form.email.id_for_label }}">邮箱：</label>-->
+                <!--{{ form.email }}-->
+                <!--{{ form.email.errors }}-->
+                <input name="email" class="form-control input-control clearfix" placeholder="email:(*)">
             </div>
-            <div class="col-md-12">
-                <label for="{{ form.text.id_for_label }}">评论：</label>
-                {{ form.text }}
-                {{ form.text.errors }}
-                <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> 发表</button>
+            <div class="col-xs-12">
+                <!--<label for="{{ form.text.id_for_label }}">评论：</label>-->
+                <!--{{ form.text }}-->
+                <!--{{ form.text.errors }}-->
+                <textarea name="text" class="form-control" placeholder="评论:(*)"></textarea>
+                <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i></button>
             </div>
         </div>    <!-- row -->
     </form>
