@@ -5,6 +5,10 @@ import markdown
 # Create your views here.
 def index(request):
     posts=Post.objects.all()
+    comment_num={}
+    for post in posts:
+        comment_list=post.comment_set.all()
+        post.comment_num=len(comment_list)
     context={
         'posts':posts,
     }

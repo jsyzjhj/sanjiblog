@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 import markdown
 from django.utils.html import strip_tags
+from comment.models import Comment
 
 # Create your models here.
 class Category(models.Model):
@@ -25,6 +26,8 @@ class Post(models.Model):
     category= models.ForeignKey(Category,on_delete=models.DO_NOTHING)
     author= models.ForeignKey(User,on_delete=models.DO_NOTHING)
     views = models.PositiveIntegerField(default=0)
+    comment_num=models.PositiveIntegerField(default=0)
+
 
     def get_absolute_url(self):
         obj=reverse('blog:detail',kwargs={'pk':self.pk})
@@ -45,3 +48,5 @@ class Post(models.Model):
             ])
             self.excerpt = strip_tags(md.convert(self.body))[:100]
         super(Post, self).save(*args, **kwargs)
+
+
