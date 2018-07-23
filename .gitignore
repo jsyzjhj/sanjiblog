@@ -1,4 +1,4 @@
 uwsgi.ini
 fabfile.py
-db.sqlite3
 tea.txt
+db.sqlite3
