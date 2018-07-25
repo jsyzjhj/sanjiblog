@@ -12,16 +12,18 @@
                 </span>
             </div><!-- /input-group -->
             </form>
-            {% for i in message%}
-            <article  class="post post-article  type-post status-publish format-standard hentry category-uncategorized tag-4">
-                <h2 class="title"><a class="slow" >id：{{i.id}}</a></h2>
-                <ul class="text">
-                    <a href="3">正文：{{i.text}}</a>
-                </ul>
+            <p>{{message}}</p>
+            <p>search engine is under construction, please check out latter</p>
+            <!--{% for i in message%}-->
+            <!--<article  class="post post-article  type-post status-publish format-standard hentry category-uncategorized tag-4">-->
+                <!--<h2 class="title"><a class="slow" >id：{{i.id}}</a></h2>-->
+                <!--<ul class="text">-->
+                    <!--<a href="3">正文：{{i.text}}</a>-->
+                <!--</ul>-->
 
-            </article>
-            {% empty%}
-            {% endfor%}
+            <!--</article>-->
+            <!--{% empty%}-->
+            <!--{% endfor%}-->
             <div class="pagination">
 	        </div>
         </div>

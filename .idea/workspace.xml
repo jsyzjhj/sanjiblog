@@ -2,92 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12a148cc-2180-4792-b579-a5b0d89f2a99" name="Default" comment="ss">
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/css/main.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/css/share.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/avatar-max-img.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/content-header.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/favicon.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/header.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/icon.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/imghover.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/loading.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/logo.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/logoplayer.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/logoplayer2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/r_title_bg.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/share.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f10.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f11.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f12.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f13.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f14.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f15.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f16.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f17.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f18.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f19.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f20.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f21.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f22.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f23.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f24.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f25.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f26.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f27.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f28.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f29.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f30.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f31.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f32.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f33.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f34.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f35.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f36.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f37.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f38.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f39.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f40.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f41.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f42.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f43.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f44.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f45.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f46.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f47.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f48.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f49.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f5.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f50.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f6.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f7.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f8.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/img/smilies/f9.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/js/functionall.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/js/home.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/js/jquery.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/js/phzoom.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/js/phzoom.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/forget/js/simplePlayer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/forget/forget.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/forget/mainpage.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/forget/post.html" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" afterPath="$PROJECT_DIR$/blog/models.py" />
-      <change beforePath="$PROJECT_DIR$/blog/templatetags/blog_tags.py" afterPath="$PROJECT_DIR$/blog/templatetags/blog_tags.py" />
-      <change beforePath="$PROJECT_DIR$/blog/urls.py" afterPath="$PROJECT_DIR$/blog/urls.py" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" afterPath="$PROJECT_DIR$/blog/views.py" />
-      <change beforePath="$PROJECT_DIR$/comment/views.py" afterPath="$PROJECT_DIR$/comment/views.py" />
-      <change beforePath="$PROJECT_DIR$/nginx.conf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/requirement.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/search/views.py" afterPath="$PROJECT_DIR$/search/views.py" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/detail.html" afterPath="$PROJECT_DIR$/templates/blog/detail.html" />
       <change beforePath="$PROJECT_DIR$/templates/search/result.html" afterPath="$PROJECT_DIR$/templates/search/result.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -109,15 +24,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forget.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="forget.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/forget/forget.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
+            <state relative-caret-position="1984">
               <caret line="214" column="40" lean-forward="false" selection-start-line="214" selection-start-column="40" selection-end-line="214" selection-end-column="40" />
               <folding>
                 <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/search/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/search/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="result.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/search/result.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="75" lean-forward="false" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -202,19 +147,19 @@
         <option value="$PROJECT_DIR$/templates/blog/base1.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/search/engine.py" />
-        <option value="$PROJECT_DIR$/search/views.py" />
         <option value="$PROJECT_DIR$/templates/blog/forget.html" />
         <option value="$PROJECT_DIR$/comment/views.py" />
         <option value="$PROJECT_DIR$/blog/urls.py" />
         <option value="$PROJECT_DIR$/blog/models.py" />
         <option value="$PROJECT_DIR$/templates/forget/mainpage.html" />
-        <option value="$PROJECT_DIR$/templates/search/result.html" />
         <option value="$PROJECT_DIR$/blog/templatetags/blog_tags.py" />
         <option value="$PROJECT_DIR$/blog/views.py" />
         <option value="$PROJECT_DIR$/templates/blog/detail.html" />
         <option value="$PROJECT_DIR$/templates/forget/forget.html" />
         <option value="$PROJECT_DIR$/templates/forget/post.html" />
         <option value="$PROJECT_DIR$/static/admin/forget/css/main.css" />
+        <option value="$PROJECT_DIR$/search/views.py" />
+        <option value="$PROJECT_DIR$/templates/search/result.html" />
       </list>
     </option>
   </component>
@@ -252,6 +197,11 @@
               <item name="blogproject2" type="b2602c69:ProjectViewProjectNode" />
               <item name="blogproject2" type="462c0819:PsiDirectoryNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogproject2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogproject2" type="462c0819:PsiDirectoryNode" />
+              <item name="search" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blogproject2" type="b2602c69:ProjectViewProjectNode" />
@@ -389,8 +339,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="66" y="44" width="1198" height="662" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23269896" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23269896" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -462,14 +413,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fabfile.py" />
-    <entry file="file://$PROJECT_DIR$/static/admin/ext/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="99" column="106" lean-forward="false" selection-start-line="98" selection-start-column="70" selection-end-line="99" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -523,26 +466,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tea.txt" />
-    <entry file="file://$PROJECT_DIR$/search/engine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="58" column="13" lean-forward="false" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/admin/img/icon-alert.svg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/blog/forget.html" />
-    <entry file="file://$PROJECT_DIR$/search/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -603,20 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="607">
           <caret line="46" column="49" lean-forward="true" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/search/result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="79" lean-forward="false" selection-start-line="6" selection-start-column="79" selection-end-line="6" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -742,14 +657,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/search/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/forget/forget.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
+        <state relative-caret-position="1984">
           <caret line="214" column="40" lean-forward="false" selection-start-line="214" selection-start-column="40" selection-end-line="214" selection-end-column="40" />
           <folding>
             <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/engine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="58" column="13" lean-forward="false" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/search/result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="75" lean-forward="false" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>
