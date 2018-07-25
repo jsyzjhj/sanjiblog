@@ -18,5 +18,5 @@ def post_comment(request, post_pk):
                        'form': form,
                        'comment_list': comment_list
                        }
-            return render(request, 'blog/detail.html', context=context)
+            return render(request, 'forget/post.html', context=context)
     return redirect(post)

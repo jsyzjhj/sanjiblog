@@ -1,0 +1,68 @@
+{% extends 'forget/forget.html'%}
+{% block content%}
+<div id="content" class="clearfix">
+	<section id="primary">
+		<div class="main">
+			<article id="{{post.pk}}" class="post post-article  ">
+                <h2 class="title"><a class="slow" title="{{post.title}}">{{post.title}}</a><span class="edit"></span></h2>
+                <ul class="text">
+                    <div >
+                        {{post.body|safe}}
+                    </div>
+                    <div class="warning">
+                        <div class="box-content">本博客所有文章如无特别注明均为原创。<br>
+                            复制或转载请以超链接形式注明转自<a href="/">阿刁</a>，原文地址《<a href="{{post.get_absolute_url}}" rel="bookmark" title="{{post.title}}">{{post.title}}</a>》
+                        </div>
+                    </div>
+                    <div class="textfoot">
+                        <span>标签： <a href="#" rel="tag">{{post.tags}}</a></span>
+                    </div>
+                    <div class="post-like">
+                        <a href="javascript:;" data-action="ding" data-id="27" class="favorite">
+                            <span class="p-like-text">喜欢</span>
+                            <span> | </span>
+                            <span class="count">0</span>
+                        </a>
+                    </div>
+                </ul>
+            </article>
+
+            <section class="comment-area" id="comment-area">
+                <hr>
+                <h3>评论区</h3>
+                <form action="{% url 'comment:post_comment' post.pk %}" method="post" >
+                    <div >
+                        <input name="name" class="form-control " placeholder="昵称:(*)">
+                    </div><br/>
+                    <div >
+                        <input name="email" class="form-control " placeholder="email:(*)">
+                    </div><br/>
+                    <div >
+                        <textarea name="text" class="form-control"  placeholder="评论:(*)"></textarea>
+                    </div>
+                    <div >
+                        <button type="submit" class="btn btn-primary">提交</button>
+                    </div>
+                </form>
+                <div class="comment-list-panel">
+                    <h4>评论列表，共 <span>{{num_comment}}</span> 条评论</h4>
+                    <ul class="comment-list list-unstyled">
+                        {% for comment in comment_list%}
+                            <li class="comment-item">
+                                <strong >{{comment.name}} &bull; </strong>
+                                <time class="submit-date" >{{ comment.create_time }}</time>
+                            </li><br/>
+                            <div class="comment-text">
+                                    {{comment.text}}
+                            </div><br/><br/>
+                        {% empty%}
+                        暂无评论
+                        {% endfor%}
+
+                    </ul>
+                </div>
+            </section>
+        </div>
+	</section>
+</div>
+{% endblock%}

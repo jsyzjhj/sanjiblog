@@ -1,6 +1,8 @@
 from django.shortcuts import render
-
+from .engine import engine
+import json
 # Create your views here.
+app=engine()
 def index(request):
     context={'a':'a'}
     obj=render(request,'search/index.html',context=context)
@@ -8,9 +10,13 @@ def index(request):
 
 def search(request):
     if 'q' in request.GET:
-        message = 'You searched for: %r' % request.GET['q']
+        keyword=request.GET['q']
+        msg=app.search(keyword=keyword)
     else:
-        message = 'You submitted an empty form.'
-    context={'message':message}
+        msg = 'You submitted an empty form.'
+
+
+    context={'message':msg,
+             'keyword':keyword}
     obj=render(request,'search/result.html',context=context)
     return obj

@@ -52,5 +52,35 @@ def category(request, pk):
     obj=render(request, 'blog/category.html', context={'post_list': post_list})
     return obj
 
+def mainpage(request):
+    posts=Post.objects.all()
+    for post in posts:
+        comment_list=post.comment_set.all()
+        post.comment_num=len(comment_list)
+    context={
+        'posts':posts,
+    }
+    obj=render(request, 'forget/mainpage.html', context=context)
+    return obj
+
+def post(request,pk):
+    post=get_object_or_404(Post,pk=pk)
+    post.increase_views()
+    post.body=markdown.markdown(post.body,
+                                extensions=[
+                                    'markdown.extensions.extra',
+                                    'markdown.extensions.codehilite',
+                                    'markdown.extensions.toc',
+                                ])
+    form=CommentForm()
+    comment_list=post.comment_set.all()
+    num_comment=len(comment_list)
+    context={'post':post,
+             'form':form,
+             'comment_list':comment_list,
+             'num_comment':num_comment,
+            }
+    obj=render(request,'forget/post.html',context=context)
+    return obj
 
 

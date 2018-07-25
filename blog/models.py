@@ -30,7 +30,7 @@ class Post(models.Model):
 
 
     def get_absolute_url(self):
-        obj=reverse('blog:detail',kwargs={'pk':self.pk})
+        obj=reverse('blog:post',kwargs={'pk':self.pk})
         return obj
 
     class Meta:
@@ -46,7 +46,7 @@ class Post(models.Model):
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
             ])
-            self.excerpt = strip_tags(md.convert(self.body))[:100]
+            self.excerpt = strip_tags(md.convert(self.body))[:150]
         super(Post, self).save(*args, **kwargs)
 
 
