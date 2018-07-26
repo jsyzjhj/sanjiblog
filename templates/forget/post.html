@@ -42,12 +42,15 @@
                     </div>
                     <div >
                         <button type="submit" class="btn btn-primary">提交</button>
+                        <span style="padding-left:25px;">评论经审核通过后展示</span>
                     </div>
+
                 </form>
                 <div class="comment-list-panel">
                     <h4>评论列表，共 <span>{{num_comment}}</span> 条评论</h4>
                     <ul class="comment-list list-unstyled">
                         {% for comment in comment_list%}
+                        {% if comment.ifvalid%}
                             <li class="comment-item">
                                 <strong >{{comment.name}} &bull; </strong>
                                 <time class="submit-date" >{{ comment.create_time }}</time>
@@ -55,6 +58,7 @@
                             <div class="comment-text">
                                     {{comment.text}}
                             </div><br/><br/>
+                        {%endif%}
                         {% empty%}
                         暂无评论
                         {% endfor%}

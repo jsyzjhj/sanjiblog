@@ -7,7 +7,7 @@ class Comment(models.Model):
     email = models.EmailField(max_length=255)
     text = models.TextField()
     create_time = models.DateTimeField(auto_now_add=True)
-    post = models.ForeignKey('blog.Post',on_delete=models.DO_NOTHING)
-
+    post = models.ForeignKey('blog.Post',on_delete=models.CASCADE)
+    ifvalid = models.BooleanField(default=False)
     def __str__(self):
         return self.text[:20]

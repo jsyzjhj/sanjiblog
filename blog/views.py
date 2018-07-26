@@ -57,6 +57,7 @@ def mainpage(request):
     for post in posts:
         comment_list=post.comment_set.all()
         post.comment_num=len(comment_list)
+        post.save()
     context={
         'posts':posts,
     }

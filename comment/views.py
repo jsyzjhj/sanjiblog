@@ -14,9 +14,13 @@ def post_comment(request, post_pk):
             return redirect(post)
         else:
             comment_list = post.comment_set.all()
+            comments=[]
+            for com in comment_list:
+                if com.ifvalid:
+                    comments.append(com)
             context = {'post': post,
                        'form': form,
-                       'comment_list': comment_list
+                       'comment_list': comments
                        }
             return render(request, 'forget/post.html', context=context)
     return redirect(post)
