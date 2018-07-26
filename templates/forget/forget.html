@@ -40,37 +40,37 @@
 	<div id="m-nav" class="m-nav ">
 		<div id="author" class="m-nav-all">
 			<div class="m-logo-url">
-				<a href="/"><img src="{% static 'admin/forget/img/logo.jpg' %}"></a>
+				<a href="about.html"><img src="{% static 'admin/forget/img/logo.jpg' %}"></a>
 				<h3>阿刁</h3>
 			</div>
 			<ul class="nav">
 				<div class="menu"></div>
 			</ul>
 		</div>
-		<!--<div id="blog_info" class="m-nav-all">-->
-			<!--<ul >-->
-				<!--{% get_blog_data as data%}-->
-				<!--<li><span class="label" ><strong>{{data.post_num}}</strong></span>-->
-					<!--<span class="label">文章</span></li>-->
-				<!--<li><span class="label"> <strong>{{data.total_comments}}</strong> </span>-->
-					<!--<span class="label">评论</span></li>-->
-				<!--<li class="last"><span class="label"> <strong>{{data.total_views}}</strong> </span>-->
-					<!--<span class="label">浏览量</span></li>-->
-			<!--</ul>-->
-		<!--</div>-->
-		<!--<div id="recent_posts" class="m-nav-all">-->
-
-				<!--<h3 >近期文章</h3>-->
-				<!--{% get_recent_posts as posts %}-->
-				<!--<ul>-->
-					<!--{% for post in posts%}-->
-					<!--<li><a href="{{post.get_absolute_url}}"><span> {{post.title}}</span></a></li>-->
-					<!--<br/>-->
-					<!--{% endfor %}-->
-				<!--</ul>-->
-
-
-		<!--</div>-->
+		<div id="blog_info" class="m-nav-all">
+			<ul class="artist-data">
+				{% get_blog_data as data%}
+				<li><strong>{{data.post_num}}</strong>
+					<span class="label">文章</span></li>
+				<li><strong>{{data.total_comments}}</strong>
+					<span class="label">评论</span></li>
+				<li class="last"> <strong>{{data.total_views}}</strong>
+					<span class="label">浏览量</span></li>
+			</ul>
+		</div>
+		<div id="recent_posts" class="bar">
+				<h4 >近期文章</h4>
+				{% get_recent_posts as posts %}
+				<ul>
+					{% for post in posts%}
+					<li class="post"><a href="{{post.get_absolute_url}}"><span class="title"> {{post.title}}</span></a></li>
+					{% endfor %}
+				</ul>
+		</div>
+		<div id="contact" class="bar">
+			<p>Email:</p>
+			<a href="mailto:sanjitown@3163.com">sanjitown@163.com</a>
+		</div>
 	</div>
 	<div class="index-search">
 		<form role="search" method="get" id="search-form" action="/search/">
@@ -100,9 +100,9 @@
 				</div>
 				<ul class="artist-data">
 					{% get_blog_data as data%}
-					<li><strong>{{data.post_num}}</strong> <span class="label">文章</span></li>
-					<li><strong>{{data.total_comments}}</strong> <span class="label">评论</span></li>
-					<li class="last"><strong>{{data.total_views}}</strong> <span class="label">浏览量</span></li>
+					<li><strong>{{data.post_num}}</strong> <span class="label1">文章</span></li>
+					<li><strong>{{data.total_comments}}</strong> <span class="label1">评论</span></li>
+					<li class="last"><strong>{{data.total_views}}</strong> <span class="label1">浏览量</span></li>
 				</ul>
 			</div>
 		</div>

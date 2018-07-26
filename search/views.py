@@ -15,8 +15,6 @@ def search(request):
         msg = 'You searched for '+keyword
     else:
         msg = 'You submitted an empty form.'
-
-
     context={'message':msg,
              'keyword':keyword}
     obj=render(request,'search/result.html',context=context)
