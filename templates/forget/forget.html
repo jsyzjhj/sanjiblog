@@ -112,18 +112,18 @@
 				<p></p>
 			</section>
 			<div class="userinfo">
-				<p class="q-fans">公告：		</p>
+				<p class="q-fans">公告：    我真的还活着		</p>
 			</div>
 			<div class="cbl-tag">
 				<div class="cbl-head">热门话题</div>
-				{% get_categories as categories%}
+				{% get_tags as tags%}
 				<div class="items">
-					{% for cat in categories%}
+					{% for tag in tags%}
 					<div class="tags-list">
-						<div class="tags-icon pull-left">{{cat.name}}</div>
+						<div class="tags-icon pull-left">{{tag.name}}</div>
 						<div class="tags-con">
-							<h3><a href="{% url 'blog:category' cat.pk %}">{{cat.name}}</a></h3>
-							<p>{{cat.num_posts}} 篇文章</p>
+							<h3><a href="#">{{tag.name}}</a></h3>
+							<p>{{tag.num_posts}} 篇文章</p>
 						</div>
 					</div>
 
@@ -132,13 +132,12 @@
 					{% endfor%}
 				</div>
 			</div>
-			<div class="cbl-comment">
-				<div class="cbl-head">
-				热门评论
-				</div>
-				<ul></ul>
-			</div>
-
+			<!--<div class="cbl-comment">-->
+				<!--<div class="cbl-head">-->
+				<!--热门评论-->
+				<!--</div>-->
+				<!--<ul></ul>-->
+			<!--</div>-->
 			<section class="widget widget_search">
 				<form role="search" method="get" id="searchform" action="/search/" class="form-inline">
 					<div class="input-group">
@@ -159,10 +158,10 @@
 				</ul>
 
 			</section>
-			<section class="widget widget_recent_comments">
-				<h2 class="widget_tit">近期评论</h2>
-				<ul id="recentcomments"></ul>
-			</section>
+			<!--<section class="widget widget_recent_comments">-->
+				<!--<h2 class="widget_tit">近期评论</h2>-->
+				<!--<ul id="recentcomments"></ul>-->
+			<!--</section>-->
 			<section class="widget widget_archive">
 				<h2 class="widget_tit">文章归档</h2>
 				{% get_archives as Archive%}

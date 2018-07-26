@@ -1,5 +1,6 @@
 {% extends 'forget/forget.html'%}
 {% block content%}
+{% load blog_tags %}
 <div id="content" class="clearfix">
 	<section id="primary">
 		<div class="main">
@@ -15,7 +16,13 @@
                         </div>
                     </div>
                     <div class="textfoot">
-                        <span>标签： <a href="#" rel="tag">{{post.tags}}</a></span>
+                        {% get_tags as tags%}
+                        <span>标签：
+                            {% for tag in tags%}
+                            <a href="#" rel="tag">{{tag.name}}</a>
+                            {%endfor%}
+                        </span>
+
                     </div>
                     <div class="post-like">
                         <a href="javascript:;" data-action="ding" data-id="27" class="favorite">
