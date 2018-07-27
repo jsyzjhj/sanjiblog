@@ -1,0 +1,61 @@
+<section class="comment-area" id="comment-area">
+    <hr>
+    <h3>评论区</h3>
+    <form action="{% url 'comment:post_comment' post.pk %}" method="post" >
+        <div >
+            <input name="name" class="form-control " placeholder="昵称:(*)">
+        </div><br/>
+        <div >
+            <input name="email" class="form-control " placeholder="email:(*)">
+        </div><br/>
+        <div >
+            <textarea name="text" class="form-control"  placeholder="评论:(*)"></textarea>
+        </div>
+        <div >
+            <input type="hidden" name="parent" value="">
+            <button type="submit" class="btn btn-primary">提交</button>
+            <span style="padding-left:25px;">评论经审核通过后展示</span>
+        </div>
+    </form>
+
+    <div class="comment-list-panel">
+        <h4>评论列表，共 <span>{{post.comment_num}}</span> 条评论</h4>
+        <ul class="comment-list list-unstyled">
+            {% for c in comment_list%}
+            {% if c.ifvalid%}
+            {% if c.ifparent%}
+            <li>
+                {% include 'forget/comment-text.html' with comment=c%}
+                <div id="spread" style="display:none">
+                    {% include 'forget/reply.html' with comment=c%}
+                </div>
+                <div class="comment-reply">
+                    <button id="reply-btn" style="padding-top:5px;border:0; background-color:rgba(0,0,0,0)">回复</button>
+                </div>
+                <ul class="comment-list ">
+                    {% for cc in c.children.all|dictsort:'create_time'%}
+                    {% if cc.ifvalid %}
+                    <li style="margin-left:12px">
+                        <strong>{{cc.name}}：</strong>{{cc.text}}
+                    </li>
+                    {% endif%}
+                    {% endfor%}
+                </ul>
+
+            </li>
+            {%endif%}
+            {%endif%}
+            <br/>
+            {% empty%}
+            暂无评论
+            {% endfor%}
+            <script>
+                var btn = $('#reply-btn')
+                var spread = $('#spread')
+                btn.click(function () {
+                    spread.slideToggle()
+                })
+            </script>
+        </ul>
+    </div>
+</section>

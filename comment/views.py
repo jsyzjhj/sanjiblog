@@ -10,6 +10,9 @@ def post_comment(request, post_pk):
         if form.is_valid():
             comment = form.save(commit=False)
             comment.post = post
+            if comment.parent:
+                print('has parent')
+                comment.ifparent=False
             comment.save()
             return redirect(post)
         else:

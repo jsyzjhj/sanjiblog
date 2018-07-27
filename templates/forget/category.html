@@ -3,7 +3,7 @@
 <div id="content" class="clearfix">
     <section id="primary">
         <div class="main" id="thumbs">
-            {% for post in posts%}
+            {% for post in post_list%}
             {% include 'forget/miniarticle.html'%}
             {% empty%}
             {% endfor%}

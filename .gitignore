@@ -3,3 +3,4 @@ fabfile.py
 tea.txt
 db.sqlite3
 search/engine.py
+admin/

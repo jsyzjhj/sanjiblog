@@ -6,6 +6,9 @@
 		<div class="main">
 			<article id="{{post.pk}}" class="post post-article  ">
                 <h2 class="title"><a class="slow" title="{{post.title}}">{{post.title}}</a><span class="edit"></span></h2>
+                <div class="textfoot">
+                    {{post.author}} 于{{post.create_time}}发表，最后修改于{{post.modify_time}}
+                </div>
                 <ul class="text">
                     <div >
                         {{post.body|safe}}
@@ -34,45 +37,7 @@
                 </ul>
             </article>
 
-            <section class="comment-area" id="comment-area">
-                <hr>
-                <h3>评论区</h3>
-                <form action="{% url 'comment:post_comment' post.pk %}" method="post" >
-                    <div >
-                        <input name="name" class="form-control " placeholder="昵称:(*)">
-                    </div><br/>
-                    <div >
-                        <input name="email" class="form-control " placeholder="email:(*)">
-                    </div><br/>
-                    <div >
-                        <textarea name="text" class="form-control"  placeholder="评论:(*)"></textarea>
-                    </div>
-                    <div >
-                        <button type="submit" class="btn btn-primary">提交</button>
-                        <span style="padding-left:25px;">评论经审核通过后展示</span>
-                    </div>
-
-                </form>
-                <div class="comment-list-panel">
-                    <h4>评论列表，共 <span>{{num_comment}}</span> 条评论</h4>
-                    <ul class="comment-list list-unstyled">
-                        {% for comment in comment_list%}
-                        {% if comment.ifvalid%}
-                            <li class="comment-item">
-                                <strong >{{comment.name}} &bull; </strong>
-                                <time class="submit-date" >{{ comment.create_time }}</time>
-                            </li><br/>
-                            <div class="comment-text">
-                                    {{comment.text}}
-                            </div><br/><br/>
-                        {%endif%}
-                        {% empty%}
-                        暂无评论
-                        {% endfor%}
-
-                    </ul>
-                </div>
-            </section>
+            {% include 'forget/comment-area.html'%}
         </div>
 	</section>
 </div>

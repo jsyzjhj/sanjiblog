@@ -49,7 +49,7 @@ def category(request, pk):
     # 记得在开始部分导入 Category 类
     cate = get_object_or_404(Category, pk=pk)
     post_list = Post.objects.filter(category=cate).order_by('-create_time')
-    obj=render(request, 'blog/category.html', context={'post_list': post_list})
+    obj=render(request, 'forget/category.html', context={'post_list': post_list})
     return obj
 
 def mainpage(request):
@@ -75,11 +75,9 @@ def post(request,pk):
                                 ])
     form=CommentForm()
     comment_list=post.comment_set.all()
-    num_comment=len(comment_list)
     context={'post':post,
              'form':form,
              'comment_list':comment_list,
-             'num_comment':num_comment,
             }
     obj=render(request,'forget/post.html',context=context)
     return obj

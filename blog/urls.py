@@ -3,7 +3,7 @@ from . import views
 
 app_name='blog'
 urlpatterns = [
-    url(r'^$',views.mainpage,name='maintage'),
+    url(r'^$',views.mainpage,name='mainpage'),
     url(r'^mainpage.html',views.mainpage,name='forget'),
     url(r'^post/(?P<pk>[0-9]+)/$',views.post,name='post'),
     #url(r'^$',views.index,name='index'),

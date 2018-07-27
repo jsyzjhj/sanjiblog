@@ -1,0 +1,12 @@
+<article id={{post.pk}} class="post post-article  type-post status-publish format-standard hentry category-uncategorized tag-4">
+    <h2 class="title"><a class="slow" href="{{post.get_absolute_url}}" title="{{post.title}}">{{post.title}}</a></h2>
+    <span class="post-time"><a><time datetime="{{post.create_time}}">{{post.create_time}}</time></a></span>
+    <ul class="text">
+        <a href="{{post.get_absolute_url}}">{{post.excerpt}}</a>
+    </ul>
+    <div class="textfoot">
+        <span class="textfoot-category"><a href="#" rel="category tag">{{post.category}}</a> &bull; </span>
+        <a>{{post.views}} 浏览 &bull; </a>
+        <a>{{post.comment_num}} 回复</a>
+    </div>
+</article>
