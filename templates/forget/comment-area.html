@@ -30,7 +30,7 @@
                     {% include 'forget/reply.html' with comment=c%}
                 </div>
                 <div class="comment-reply">
-                    <button id="reply-btn" style="padding-top:5px;border:0; background-color:rgba(0,0,0,0)">回复</button>
+                    <button id="reply-btn" class="reply-btn">回复</button>
                 </div>
                 <ul class="comment-list ">
                     {% for cc in c.children.all|dictsort:'create_time'%}

@@ -5,6 +5,7 @@
 <html>
 <head>
 	<title>阿刁 - my site</title>
+	<!-- theme forget transplanted from Wordpress theme forget-->
 
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 	<meta name="keywords" content="" />
@@ -61,7 +62,7 @@
 		</div>
 		<div id="recent_posts" class="bar">
 				<h4 >近期文章</h4>
-				{% get_recent_posts as posts %}
+				{% get_recent_posts 3 as posts %}
 				<ul>
 					{% for post in posts%}
 					<li class="post"><a href="{{post.get_absolute_url}}"><span class="title"> {{post.title}}</span></a></li>
@@ -70,7 +71,7 @@
 		</div>
 		<div id="contact" class="bar">
 			<p>Email:</p>
-			<a href="mailto:sanjitown@3163.com">sanjitown@163.com</a>
+			<a href="mailto:sanjitown@163.com">sanjitown@163.com</a>
 		</div>
 	</div>
 	<div class="index-search">

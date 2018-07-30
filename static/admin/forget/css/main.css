@@ -201,6 +201,8 @@ aside section h2{background:#299982;color:#FFF;padding-left:30px;height:30px;lin
 .comment-avatar img{border-radius:4px;}
 .comment-floor{top:10px;right:0;display:block;color:#666;}
 .comment-avatar{left:0;}
+.comment-reply{padding-top:10px;color:#444;}
+.comment-reply .reply-btn{padding-top:5px;border:0px;background-color:rgba(0,0,0,0)}
 .comment-children-body .comment-data a,.comment-reply-link{color:#444;}
 .comment-floor a:hover,.comment-children-body .comment-data a:hover,.comment-reply-link:hover{color:#5895be;}
 .comment-to,.comment-date,.comment-floor a{color:#a5a5a5;}
@@ -444,6 +446,7 @@ footer {padding: 20px;margin: 20px 0 0;text-align:center;background-color:#fffff
 .index-search #search-form-close{position:absolute;top:0;right:0;z-index:45;width:55px;height:51px;color:#a9a9a9;text-align:center;line-height:58px;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;}
 .index-search #search-form-close.hover{color:#3dabda;}
 .index-search #search-form input[type="button"]{position:absolute;top:9999px;right:9999px;z-index:-9999;width:0;height:0;text-indent:-9999px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;}
+
 
 h1.t_nav span{ float:right; color:#999}
 h1.t_nav { border-bottom: #F1F1F1 1px solid; font-size: 12px; font-weight: normal; line-height: 40px; height: 40px;margin:20px auto;width:1000px }
