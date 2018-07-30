@@ -20,17 +20,18 @@
 
     <div class="comment-list-panel">
         <h4>评论列表，共 <span>{{post.comment_num}}</span> 条评论</h4>
-        <ul class="comment-list list-unstyled">
+        <div class="comment-list list-unstyled">
             {% for c in comment_list%}
-            {% if c.ifvalid%}
-            {% if c.ifparent%}
-            <li>
+            <div>
+                {% if c.ifvalid%}
+                {% if c.ifparent%}
                 {% include 'forget/comment-text.html' with comment=c%}
-                <div id="spread" style="display:none">
+                <div class="toggleSpread" style="display:none">
                     {% include 'forget/reply.html' with comment=c%}
                 </div>
                 <div class="comment-reply">
-                    <button id="reply-btn" class="reply-btn">回复</button>
+                    <button class="reply-btn">回复</button>
+
                 </div>
                 <ul class="comment-list ">
                     {% for cc in c.children.all|dictsort:'create_time'%}
@@ -40,22 +41,19 @@
                     </li>
                     {% endif%}
                     {% endfor%}
-                </ul>
-
-            </li>
-            {%endif%}
-            {%endif%}
-            <br/>
+                </ul><br/>
+                {%endif%}
+                {%endif%}
+            </div>
             {% empty%}
             暂无评论
             {% endfor%}
-            <script>
-                var btn = $('#reply-btn')
-                var spread = $('#spread')
-                btn.click(function () {
-                    spread.slideToggle()
-                })
-            </script>
-        </ul>
+
+        </div>
     </div>
 </section>
+<script>
+    $(".reply-btn").click(function(){
+      $(this).parent().parent().find(".toggleSpread").toggle();
+    });
+</script>
