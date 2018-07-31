@@ -1,41 +1,11 @@
-from django.shortcuts import render,get_object_or_404
-from .models import Post,Category
+from django.shortcuts import render,get_object_or_404,redirect
+from .models import Post,Category,Visitor,Like
 from comment.forms import CommentForm
 import markdown
 # Create your views here.
-def index(request):
-    posts=Post.objects.all()
-    comment_num={}
-    for post in posts:
-        comment_list=post.comment_set.all()
-        post.comment_num=len(comment_list)
-    context={
-        'posts':posts,
-    }
-    obj=render(request,'blog/index.html',context=context)
-    return obj
 
 def about(request):
     obj=render(request,'blog/about.html')
-    return obj
-
-def detail(request,pk):
-    post=get_object_or_404(Post,pk=pk)
-    post.increase_views()
-    post.body=markdown.markdown(post.body,
-                                extensions=[
-                                    'markdown.extensions.extra',
-                                    'markdown.extensions.codehilite',
-                                    'markdown.extensions.toc',
-                                ])
-    form=CommentForm()
-    comment_list=post.comment_set.all()
-    num_comment=len(comment_list)
-    context={'post':post,
-             'form':form,
-             'comment_list':comment_list,
-             'num_comment':num_comment}
-    obj=render(request,'blog/detail.html',context=context)
     return obj
 
 def archives(request, year, month):
@@ -56,6 +26,11 @@ def mainpage(request):
     posts=Post.objects.all()
     for post in posts:
         comment_list=post.comment_set.all()
+        visitors=post.visitor_set.all()
+        ips=[]
+        for vi in visitors:
+            ips.append(vi.ip)
+        post.views=len(set(ips))
         post.comment_num=len(comment_list)
         post.save()
     context={
@@ -65,8 +40,14 @@ def mainpage(request):
     return obj
 
 def post(request,pk):
-    post=get_object_or_404(Post,pk=pk)
-    post.increase_views()
+    post = get_object_or_404(Post,pk=pk)
+    ip =  request.META['REMOTE_ADDR']
+    agent= request.META['HTTP_USER_AGENT']
+    visitor=Visitor()
+    visitor.ip=ip
+    visitor.user_agent=agent
+    visitor.post=post
+    visitor.save()
     post.body=markdown.markdown(post.body,
                                 extensions=[
                                     'markdown.extensions.extra',
@@ -82,4 +63,16 @@ def post(request,pk):
     obj=render(request,'forget/post.html',context=context)
     return obj
 
-
+def like(request,pk):
+    ip = request.META['REMOTE_ADDR']
+    user_agent= request.META['HTTP_USER_AGENT']
+    post=get_object_or_404(Post,pk=pk)
+    if Like.objects.filter(ip=ip,post=post,user_agent=user_agent).exists():
+        post.likes+=0
+        post.save()
+        return redirect(post)
+    else:
+        Like.objects.create(ip=ip,post=post,user_agent=user_agent)
+        post.likes+=1
+        post.save()
+        return redirect(post)

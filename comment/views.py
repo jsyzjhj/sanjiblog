@@ -10,6 +10,7 @@ def post_comment(request, post_pk):
         if form.is_valid():
             comment = form.save(commit=False)
             comment.post = post
+            comment.ip=request.META['REMOTE_ADDR']
             if comment.parent:
                 print('has parent')
                 comment.ifparent=False

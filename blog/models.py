@@ -27,7 +27,10 @@ class Post(models.Model):
     author= models.ForeignKey(User,on_delete=models.DO_NOTHING)
     views = models.PositiveIntegerField(default=0)
     comment_num=models.PositiveIntegerField(default=0)
+    likes = models.PositiveIntegerField(default=0)
 
+    def __str__(self):
+        return self.title
 
     def get_absolute_url(self):
         obj=reverse('blog:post',kwargs={'pk':self.pk})
@@ -49,4 +52,12 @@ class Post(models.Model):
             self.excerpt = strip_tags(md.convert(self.body))[:150]
         super(Post, self).save(*args, **kwargs)
 
+class Visitor(models.Model):
+    ip = models.GenericIPAddressField()
+    user_agent=models.CharField(max_length=200,null=True)
+    time = models.DateTimeField(auto_now_add=True)
+    post = models.ForeignKey(Post,on_delete=models.CASCADE)
+
+class Like(Visitor):
+    iflike= models.IntegerField(default=0)
 

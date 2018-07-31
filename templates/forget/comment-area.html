@@ -27,7 +27,7 @@
                 {% if c.ifparent%}
                 {% include 'forget/comment-text.html' with comment=c%}
                 <div class="toggleSpread" style="display:none">
-                    {% include 'forget/reply.html' with comment=c%}
+                    {% include 'forget/reply-form.html' with comment=c%}
                 </div>
                 <div class="comment-reply">
                     <button class="reply-btn">回复</button>

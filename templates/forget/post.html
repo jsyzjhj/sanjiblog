@@ -28,10 +28,10 @@
 
                     </div>
                     <div class="post-like">
-                        <a href="javascript:;" data-action="ding" data-id="27" class="favorite">
+                        <a href="{{post.get_absolute_url}}/like" data-action="ding" data-id="27" class="favorite">
                             <span class="p-like-text">喜欢</span>
                             <span> | </span>
-                            <span class="count">0</span>
+                            <span class="count">{{post.likes}}</span>
                         </a>
                     </div>
                 </ul>
