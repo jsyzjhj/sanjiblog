@@ -173,7 +173,8 @@ aside section h2{background:#299982;color:#FFF;padding-left:30px;height:30px;lin
 .form-control::-webkit-input-placeholder{color:#999;}
 .input-group-btn{position:relative;white-space:nowrap;font-size:0;display: table-cell;vertical-align: middle;}
 #search-btn{padding: 5px 12px;}
-.btn{display:inline-block;margin-bottom:0;padding:5px 12px;border:1px solid transparent;background-image:none;vertical-align:middle;text-align:center;white-space:nowrap;font-weight:400;font-size:14px;line-height:1.42857143;cursor:pointer;-ms-touch-action:manipulation;touch-action:manipulation;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.btn{display:inline-block;margin-bottom:0;padding:5px 12px;border:1px solid transparent;background-color:#299982;background-image:none;vertical-align:middle;text-align:center;white-space:nowrap;font-weight:400;font-size:14px;line-height:1.42857143;cursor:pointer;-ms-touch-action:manipulation;touch-action:manipulation;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.submit-btn{border-color:#299982;background-color:#299982;color:#fff;}
 .btn-primary{border-color:#299982;background-color:#299982;color:#fff;}
 
 /* ebox ======================================================================================================== */

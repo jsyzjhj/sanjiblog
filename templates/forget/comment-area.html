@@ -1,32 +1,26 @@
 <section class="comment-area" id="comment-area">
     <hr>
     <h3>评论区</h3>
-    <form action="{% url 'comment:post_comment' post.pk %}" method="post" >
-        <div >
-            <input name="name" class="form-control " placeholder="昵称:(*)">
-        </div><br/>
-        <div >
-            <input name="email" class="form-control " placeholder="email:(*)">
-        </div><br/>
-        <div >
-            <textarea name="text" class="form-control"  placeholder="评论:(*)"></textarea>
-        </div>
-        <div >
-            <input type="hidden" name="parent" value="">
-            <button type="submit" class="btn btn-primary">提交</button>
-            <span style="padding-left:25px;">评论经审核通过后展示</span>
-        </div>
+    <form class="commentForm" action="{% url 'comment:post_comment' post.pk %}">
+        <input name="name" class="form-control " placeholder="昵称:(*)">
+        <input name="email" class="form-control " placeholder="email:(*)">
+        <textarea name="text" class="form-control"  placeholder="评论:(*)"></textarea>
+        <input type="hidden" name="parent">
+        <!--<input type="hidden" name="ifparent" value="1">-->
+        <button type="button" class="submit-btn btn">提交</button>
+        <span style="padding-left:25px;">评论经审核通过后展示</span>
     </form>
+
 
     <div class="comment-list-panel">
         <h4>评论列表，共 <span>{{post.comment_num}}</span> 条评论</h4>
         <div class="comment-list list-unstyled">
             {% for c in comment_list%}
             <div>
-                {% if c.ifvalid%}
+
                 {% if c.ifparent%}
                 {% include 'forget/comment-text.html' with comment=c%}
-                <div class="toggleSpread" style="display:none">
+                <div class="reply-form" style="display:none">
                     {% include 'forget/reply-form.html' with comment=c%}
                 </div>
                 <div class="comment-reply">
@@ -35,15 +29,14 @@
                 </div>
                 <ul class="comment-list ">
                     {% for cc in c.children.all|dictsort:'create_time'%}
-                    {% if cc.ifvalid %}
+
                     <li style="margin-left:12px">
                         <strong>{{cc.name}}：</strong>{{cc.text}}
                     </li>
-                    {% endif%}
                     {% endfor%}
                 </ul><br/>
                 {%endif%}
-                {%endif%}
+
             </div>
             {% empty%}
             暂无评论
@@ -53,7 +46,5 @@
     </div>
 </section>
 <script>
-    $(".reply-btn").click(function(){
-      $(this).parent().parent().find(".toggleSpread").toggle();
-    });
+
 </script>

@@ -4,12 +4,12 @@
 <div id="content" class="clearfix">
 	<section id="primary">
 		<div class="main">
-			<article id="{{post.pk}}" class="post post-article  ">
-                <h2 class="title"><a class="slow" title="{{post.title}}">{{post.title}}</a><span class="edit"></span></h2>
+			<article class="post post-article  ">
+                <h2 class="title"><a href="{{post.get_absolute_url}}" class="slow" title="{{post.title}}">{{post.title}}</a></h2>
                 <div class="textfoot">
                     {{post.author}} 于{{post.create_time}}发表，最后修改于{{post.modify_time}}
                 </div>
-                <ul class="text">
+                <div class="text">
                     <div >
                         {{post.body|safe}}
                     </div>
@@ -27,18 +27,21 @@
                         </span>
 
                     </div>
-                    <div class="post-like">
-                        <a href="{{post.get_absolute_url}}/like" data-action="ding" data-id="27" class="favorite">
+                    <div class="post-like" rel="">
+                        <a data-action="ding" class="favorite">
                             <span class="p-like-text">喜欢</span>
                             <span> | </span>
                             <span class="count">{{post.likes}}</span>
                         </a>
                     </div>
-                </ul>
+                </div>
             </article>
 
             {% include 'forget/comment-area.html'%}
         </div>
 	</section>
 </div>
+<script>
+
+</script>
 {% endblock%}

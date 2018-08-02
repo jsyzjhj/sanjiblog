@@ -1,4 +1,5 @@
 from django.shortcuts import render,get_object_or_404,redirect
+from django.http import HttpResponse
 from .models import Post,Category,Visitor,Like
 from comment.forms import CommentForm
 import markdown
@@ -70,9 +71,11 @@ def like(request,pk):
     if Like.objects.filter(ip=ip,post=post,user_agent=user_agent).exists():
         post.likes+=0
         post.save()
-        return redirect(post)
+        obj=render(request,'forget/post-like.html',{'likes':post.likes})
+        return obj
     else:
         Like.objects.create(ip=ip,post=post,user_agent=user_agent)
         post.likes+=1
         post.save()
-        return redirect(post)
+        obj=render(request,'forget/post-like.html',{'likes':post.likes})
+        return obj

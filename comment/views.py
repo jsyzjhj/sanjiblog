@@ -1,5 +1,7 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse
 from blog.models import Post
+import json
 from .models import Comment
 from .forms import CommentForm
 
@@ -11,20 +13,13 @@ def post_comment(request, post_pk):
             comment = form.save(commit=False)
             comment.post = post
             comment.ip=request.META['REMOTE_ADDR']
+            comment.user_agent=request.META['HTTP_USER_AGENT']
             if comment.parent:
-                print('has parent')
-                comment.ifparent=False
+                comment.ifparent = False
             comment.save()
-            return redirect(post)
+
+            return HttpResponse('form got')
         else:
-            comment_list = post.comment_set.all()
-            comments=[]
-            for com in comment_list:
-                if com.ifvalid:
-                    comments.append(com)
-            context = {'post': post,
-                       'form': form,
-                       'comment_list': comments
-                       }
-            return render(request, 'forget/post.html', context=context)
-    return redirect(post)
+            return HttpResponse('invalid')
+    else:
+        return HttpResponse('not post')
