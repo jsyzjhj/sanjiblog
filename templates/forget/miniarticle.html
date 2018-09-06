@@ -1,13 +1,27 @@
-<article id={{post.pk}} class="post post-article  type-post status-publish format-standard hentry category-uncategorized tag-4">
+{% load staticfiles %}
+<article id={{post.pk}} class="post-article ">
+    <div class="author">
+        <a class="author-pic"><img class="author-pic" src="{% static 'admin/forget/img/logo.jpg' %}"></a>
+        <span class="author-name" >{{post.author}}</span> 
+
+        <span class="post-time"><time >{{post.create_time}}</time></span>
+    </div>
+    
+    <a class="post-cover" href="{{post.get_absolute_url}}"><img class="scale" src="{{post.cover_pic}}"></a>
     <h2 class="title"><a class="slow" href="{{post.get_absolute_url}}" title="{{post.title}}">{{post.title}}</a></h2>
-    <span class="post-time"><a><time datetime="{{post.create_time}}">{{post.create_time}}</time></a></span>
+    <span class="tags">
+        {% for tag in post.tags.all%}
+        <a class="tag" href="#" rel="tag">{{tag.name}}</a>
+        {%endfor%}
+    </span>
     <ul class="text">
         <a href="{{post.get_absolute_url}}">{{post.excerpt}}</a>
     </ul>
+    
     <div class="textfoot">
-        <span class="textfoot-category"><a href="#" rel="category tag">{{post.category}}</a> &bull; </span>
-        <a>{{post.views}} 浏览 &bull; </a>
-        <a>{{post.comment_num}} 评论&bull;</a>
-        <a>{{post.likes}} 人喜欢 </a>
+        
+        <a><img src="{% static 'admin/forget/img/view.png' %}">{{post.views}}  </a>
+        <a><img src="{% static 'admin/forget/img/comment.png' %}">{{post.comment_num}} </a>
+        <a><img src="{% static 'admin/forget/img/like.png' %}">{{post.likes}} </a>
     </div>
 </article>

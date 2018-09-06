@@ -18,16 +18,18 @@ class Tag(models.Model):
 
 class Post(models.Model):
     title= models.CharField(max_length=200)
+    cover_pic=models.CharField(max_length=200)
     body = models.TextField()
     create_time= models.DateTimeField(auto_now_add=True)
     modify_time= models.DateTimeField(auto_now=True)
-    excerpt= models.CharField(max_length=200,blank=True)
+    excerpt= models.TextField(max_length=200,blank=True)
     tags= models.ManyToManyField(Tag,blank=True)
     category= models.ForeignKey(Category,on_delete=models.DO_NOTHING)
     author= models.ForeignKey(User,on_delete=models.DO_NOTHING)
     views = models.PositiveIntegerField(default=0)
     comment_num=models.PositiveIntegerField(default=0)
     likes = models.PositiveIntegerField(default=0)
+
 
     def __str__(self):
         return self.title
