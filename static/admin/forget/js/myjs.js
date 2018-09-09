@@ -11,11 +11,20 @@ $(".submit-btn").click(function(){
     alert(data+status);
     })
 });
+//在主页点赞
+// $(".like-img").click(function(){
+//     var url = $(this).parent().parent().parent().find("h2").children().attr("href")+"/like";
+//     var imgurl = $(".post-liked").attr("href");
+//     $(this).load(url,function(data){
+//     	 $(".p-like-text").attr("src":imgurl); 
+//     })
+    //$(this).find(".like-img").attr("src":imgurl); 
+//});
 //喜欢文章
 $(".post-like").click(function(){
     var url = $("h2").children().attr("href")+"/like";
     $(this).load(url,function(data){
-    $(".p-like-text").html('已喜欢'); console.log(data);
+    $(".p-like-text").html('已喜欢'); 
     })
 });
 //侧边栏展开
