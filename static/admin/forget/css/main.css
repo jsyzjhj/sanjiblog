@@ -57,14 +57,13 @@ blockquote{overflow:hidden;border:0;padding:8px 12px;margin:5px 0 15px;backgroun
 .container{max-width:1100px;min-width:320px;margin:10px 42px;padding:0;position:relative;}
 
 #content{margin-left: 370px;}
-.post-article{background: #fff;margin: 10px ;box-shadow: 0px 2px 5px #c1c1c1; overflow: hidden;}
-.post-article .title{margin-top:15px;margin-bottom:3px;font-family: "PingFang SC", "Microsoft JhengHei";font-size:18px;line-height:0px;padding:15px 30px 8px;font-weight: normal;}
-.post-article .title a{color:#454545;}
-.post-article .edit {margin-left: 20px;color:#949494;font-size: 14px;}
-.post-article .edit a{color:#949494;}
-.post-article .text{font-size:14px;color: #666;padding:20px 30px 10px;word-wrap: break-word;}
+.post-article{background: #fff; overflow: hidden; font-family: "PingFang SC", "Microsoft JhengHei";}
+.post-article .title{margin:40px 0px;padding: 0 30px; text-align: center; font-family: "PingFang SC", "Microsoft JhengHei";font-size:24px;color:#4e5053; line-height:35px;}
+.post-article .mini-title{padding: 0 30px;  font-family: "PingFang SC", "Microsoft JhengHei";font-size:18px;color:#404040; }
+.post-article .text-info{font-size: 11px; color: #9a9a9a; text-align: center;margin-bottom:40px; }
+.post-article .text{font-size:14px;text-align: -webkit-left; color: #4b4c4c;padding:20px 20px 10px;word-wrap: break-word;}
 .post-article .text .tags-list{ margin-bottom:15px; padding-bottom:15px; width:20%; border-bottom:1px solid #EEE;}
-.post-article .text p{line-height:24px;margin-bottom:10px;}
+.post-article .text p{line-height:30px;margin-bottom:0px;font-size: 17px;}
 .post-article .text p img,.text img{display:block;max-width:100%;height:auto;}
 .post-article .textimg{text-align:center;}
 .post-article .textimg img{max-width:500px;width:expression(document.body.clientWidth>500?"500px":"auto");}
