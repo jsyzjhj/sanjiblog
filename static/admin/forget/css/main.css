@@ -34,7 +34,7 @@ blockquote{overflow:hidden;border:0;padding:8px 12px;margin:5px 0 15px;backgroun
 .nav{margin-left:0;margin-bottom:20px;list-style:none}
 .nav > li > a{display:block}
 .nav > li > a:hover,.nav > li > a:focus{text-decoration:none;background-color:#eeeeee}
-.m-nav{height:52px;background-color:#4a4a4a;position:relative;overflow-y: scroll;}
+.m-nav{display: none; height:52px;background-color:#4a4a4a;position:relative;overflow-y: scroll;}
 .m-nav:after{clear:both}
 .m-nav .nav{position:relative;max-width: 1100px;float: left;display:block;margin: 0 auto;font-size:14px}
 .m-nav .nav.pull-right{float:right;margin-right:0}
@@ -54,10 +54,10 @@ blockquote{overflow:hidden;border:0;padding:8px 12px;margin:5px 0 15px;backgroun
 .m-nav .nav li:hover a,.m-nav .nav li.current-menu-item a,.m-nav .nav li.current-menu-parent a,.m-nav .nav li.current_page_item a,.m-nav .nav li.current-post-ancestor a{background-color:#404040;}
 .m-nav .nav li ul{background-color:#404040;}
 
-.container{max-width:1100px;min-width:320px;margin:10px 42px;padding:0;position:relative;}
+.container{max-width:1f100px;min-width:320px;margin:10px 42px;padding:0;position:relative;}
 
-#content{margin-left: 370px;}
-.post-article{background: #fff; overflow: hidden; font-family: "PingFang SC", "Microsoft JhengHei";}
+#content{margin: 10px 0px 0px 370px; padding: 10px;}
+.post-article{background: #fff;margin-bottom: 15px;box-shadow: 0px 2px 5px #c1c1c1; border-radius: 2px; overflow: hidden; font-family: "PingFang SC", "Microsoft JhengHei";}
 .post-article .title{margin:40px 0px;padding: 0 30px; text-align: center; font-family: "PingFang SC", "Microsoft JhengHei";font-size:24px;color:#4e5053; line-height:35px;}
 .post-article .mini-title{padding: 0 30px;  font-family: "PingFang SC", "Microsoft JhengHei";font-size:18px;color:#404040; }
 .post-article .text-info{font-size: 11px; color: #9a9a9a; text-align: center;margin-bottom:40px; }
@@ -372,7 +372,7 @@ footer {padding: 20px;margin: 20px 0 0;text-align:center;background-color:#fffff
 .m-header h1{margin:0;text-align:center;font-weight:bold;font-size:14px;font-family:'Open Sans','Helvetica Neue',sans-serif;}
 .m-header h1 a{margin:0;padding:12px 25px;height:48px;color:#fff;font-size:14px;line-height:53px;}
 .m-nav-all{display:block;margin:0 auto;max-width:1100px;}
-.m-nav .artist-data {margin-top:50px;text-align: center;color: #666;}
+.m-nav .artist-data {text-align: center;color: #666;}
 .m-nav .artist-data li {display: inline-block;padding: 0 0;border-right: 1px solid #ccc;text-align: center;height: 35px;line-height: 18px;}
 .m-nav .artist-data li strong {font-size: 16px;color:#FEE;}
 .m-nav .artist-data li .label {color:#FFF;display: block;}
@@ -431,7 +431,7 @@ h1.t_nav a { width: 100px; display: block; text-align: center; color: #fff; floa
 	.m-nav-open{left:0 !important;opacity:1 !important;}
 	.container{padding-left:0;padding-right:0;left:0;margin:0;background-color:rgb(238, 237, 237);-webkit-transition:all .3s ease;-moz-transition:all .3s ease;transition:all .3s ease;}
 	.m-container-open,.m-footer-open{left:30% !important;}
-	#content,#pagination{margin:0;}
+	#content,#pagination{margin:10px 0 0 0 ;}
 	#pagination a{margin:auto;width:50%;}
 	footer{position:relative;left:0;overflow:hidden;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;transition:all .3s ease;}
 	.m-nav::-webkit-scrollbar {width:0px;}

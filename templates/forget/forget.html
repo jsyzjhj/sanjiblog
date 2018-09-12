@@ -4,89 +4,90 @@
 
 <html>
 <head>
-	<title>阿刁的博客</title>
-	<!-- theme forget transplanted from Wordpress theme forget-->
+    {% get_site_info as site%}
+    <title>{{site.title}}</title>
+    <!-- theme forget transplanted from Wordpress theme forget-->
 
-	<meta name="viewport" content="initial-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no">
 
-	<link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" >
-	<link rel='stylesheet' href="{% static 'admin/forget/css/main.css' %}" type='text/css' media='screen' id='css-css'/>
-	<script type='text/javascript' src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" >
+    <link rel='stylesheet' href="{% static 'admin/forget/css/main.css' %}" type='text/css' media='screen' id='css-css'/>
+    <script type='text/javascript' src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 
 </head>
 
 <body>
-	<header class="l-header" style="background-image:url({% static 'admin/forget/img/header.jpg'%});">
-		<div class="hdbg"></div>
-		<div class="hdbg2"></div>
-		<div class="m-about">
-			<div id="logo">
-				<a href="/" >
-					<img src="{% static '/admin/forget/img/logo.jpg' %}"></a>
-			</div>
-			<h1 class="tit"><a href="/"></a></h1>
-			<div class="about"></div>
-		</div>
-	</header>
-	<div id="m-nav" class="m-nav ">
-		<div id="author" class="m-nav-all">
-			<div class="m-logo-url">
-				<a href="about.html"><img src="{% static 'admin/forget/img/logo.jpg' %}"></a>
-				<h3>阿刁</h3>
-			</div>
-			<ul class="nav">
-				<div class="menu"></div>
-			</ul>
-		</div>
-		<div id="blog_info" class="m-nav-all">
-			<ul class="artist-data">
-				{% get_blog_data as data%}
-				<li><strong>{{data.post_num}}</strong>
-					<span class="label">文章</span></li>
-				<li><strong>{{data.total_comments}}</strong>
-					<span class="label">评论</span></li>
-				<li class="last"> <strong>{{data.total_views}}</strong>
-					<span class="label">浏览量</span></li>
-			</ul>
-		</div>
-		<div id="recent_posts" class="bar">
-				<h4 >近期文章</h4>
-				{% get_recent_posts 3 as posts %}
-				<ul>
-					{% for post in posts%}
-					<li class="post"><a href="{{post.get_absolute_url}}"><span class="title"> {{post.title}}</span></a></li>
-					{% endfor %}
-				</ul>
-		</div>
-		<div id="contact" class="bar">
-			<p>Email:</p>
-			<a href="mailto:sanjitown@163.com">sanjitown@163.com</a>
-		</div>
-	</div>
-	<div class="index-search">
-		<form role="search" method="get" id="search-form" action="/search/">
-			<div class="search-form">
-				<span id="search-form-close">&times;</span>
-				<input placeholder="Search for" type="text" value="" name="q" id="search-input-s" />
-				<input type="submit" class="webFont" id="searchsubmit" value="搜索" />
-			</div>
-		</form>
-	</div>
-	<div id="m-header" class="m-header " style="position: fixed;">
-		<div id="showLeftPush" class="left m-header-button"></div>
-		<h1><a href="/">阿刁</a></h1>
-		<div id="search-trigger" style="font-size: 18px;" class="right m-header-search"></div>
-	</div>
+    <header class="l-header" style="background-image:url({% static 'admin/forget/img/header.jpg'%});">
+        <div class="hdbg"></div>
+        <div class="hdbg2"></div>
+        <div class="m-about">
+            <div id="logo">
+                <a href="/" >
+                    <img src="{{site.logo}}"></a>
+            </div>
+            <h1 class="tit"><a href="/"></a></h1>
+            <div class="about"></div>
+        </div>
+    </header>
+    <div id="m-nav" class="m-nav ">
+        <div id="author" class="m-nav-all">
+            <div class="m-logo-url">
+                <a href="about.html"><img src="{{site.logo}}"></a>
+                <h3>{{site.owner}}</h3>
+            </div>
+            <ul class="nav">
+                <div class="menu"></div>
+            </ul>
+        </div>
+        <div id="blog_info" class="m-nav-all">
+            <ul class="artist-data">
+                {% get_blog_data as data%}
+                <li><strong>{{data.post_num}}</strong>
+                    <span class="label">文章</span></li>
+                <li><strong>{{data.total_comments}}</strong>
+                    <span class="label">评论</span></li>
+                <li class="last"> <strong>{{data.total_views}}</strong>
+                    <span class="label">浏览量</span></li>
+            </ul>
+        </div>
+        <div id="recent_posts" class="bar">
+                <h4 >近期文章</h4>
+                {% get_recent_posts 3 as posts %}
+                <ul>
+                    {% for post in posts%}
+                    <li class="post"><a href="{{post.get_absolute_url}}"><span class="title"> {{post.title}}</span></a></li>
+                    {% endfor %}
+                </ul>
+        </div>
+        <div id="contact" class="bar">
+            <p>Email:</p>
+            <a href="mailto:{{site.email}}">{{site.email}}</a>
+        </div>
+    </div>
+    <div class="index-search">
+        <form role="search" method="get" id="search-form" action="/search/">
+            <div class="search-form">
+                <span id="search-form-close">&times;</span>
+                <input placeholder="Search for" type="text" value="" name="q" id="search-input-s" />
+                <input type="submit" class="webFont" id="searchsubmit" value="搜索" />
+            </div>
+        </form>
+    </div>
+    <div id="m-header" class="m-header " style="position: fixed;">
+        <div id="showLeftPush" class="left m-header-button"></div>
+        <h1><a href="/">{{site.owner}}</a></h1>
+        <div id="search-trigger" style="font-size: 18px;" class="right m-header-search"></div>
+    </div>
     <div id="m-container" class="container" style="top: 40px;" >
         <aside class="sidebar">
             <div class="cbl-logo">
                 <div class="cbl-logo-info">
-                    <h3><a href="/">阿刁</a></h3>
+                    <h3><a href="/">{{site.owner}}</a></h3>
                     <div class="cbl-logo-like">
                         <a href="javascript:;" data-action="ding" data-id="676767" class="favorite">
                             <span class="c-like-text">关注</span>
                             <span> | </span>
-                            <span class="count">13</span>
+                            <span class="count">12</span>
                         </a>
                     </div>
                     <ul class="artist-data">
@@ -103,7 +104,7 @@
                     <p></p>
                 </section>
                 <div class="userinfo">
-                    <p class="q-fans">公告：    离		</p>
+                    <p class="q-fans">公告： {{site.anc}}    </p>
                 </div>
                 <div class="cbl-tag">
                     <div class="cbl-head">热门话题</div>
@@ -188,7 +189,7 @@
 
     <footer id="m-footer">
         <div class="Copyright">
-            <p class="copyright">&copy  - <a href="about.html"> Adiao Blog</a></p>
+            <p class="copyright">&copy;  - <a href="about.html"> {{site.footer}}</a></p>
         </div>
     </footer>
 <script type='text/javascript' src="{% static 'admin/forget/js/functionall.js'%}"></script>
@@ -202,5 +203,3 @@ var fashao = {"url":"#","ajaxurl":"#","postid":"#"};
 
 </body>
 </html>
-
-

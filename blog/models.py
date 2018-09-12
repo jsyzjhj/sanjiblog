@@ -66,3 +66,15 @@ class Visitor(models.Model):
 class Like(Visitor):
     iflike= models.IntegerField(default=0)
 
+class Site(models.Model):
+    """docstring for Site
+       用于定义网站的一些信息，如名称，拥有者信息等
+    """ 
+    owner=models.CharField(max_length=100)
+    owner_email=models.CharField(max_length=100)
+    logo_url=models.CharField(max_length=200)
+    title=models.CharField(max_length=100)#site name
+    announcement=models.CharField(max_length=200)
+    footer=models.CharField(max_length=100)
+        
+

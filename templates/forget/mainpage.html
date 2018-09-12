@@ -2,16 +2,12 @@
 {% extends 'forget/forget.html'%}
 {% load staticfiles %}
 {% block content%}
-<div id="content" class="clearfix">
-    <section id="primary">
-        <div class="main" id="thumbs">
+<div id="content" >       
             {% for post in posts%}
             {% include 'forget/miniarticle.html'%}
             {% empty%}
             {% endfor%}
             <div class="pagination">
-	        </div>
-        </div>
-    </section>
+	        </div>     
 </div>
 {% endblock%}

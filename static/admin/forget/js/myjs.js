@@ -27,7 +27,10 @@ $(".post-like").click(function(){
     $(".p-like-text").html('已喜欢'); 
     })
 });
-//侧边栏展开
+//侧边栏展开 
+// $("#showLeftPush").click(function(){
+// 	$("#nav-bar").toggle(500);
+// })
 function fssilde(){
 	var mheader = document.getElementById( 'm-header' ),
 		menuLeft = document.getElementById( 'm-nav' ),
