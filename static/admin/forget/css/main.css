@@ -61,6 +61,7 @@ blockquote{overflow:hidden;border:0;padding:8px 12px;margin:5px 0 15px;backgroun
 .post-article .title{margin:40px 0px;padding: 0 30px; text-align: center; font-family: "PingFang SC", "Microsoft JhengHei";font-size:24px;color:#4e5053; line-height:35px;}
 .post-article .mini-title{padding: 0 30px;  font-family: "PingFang SC", "Microsoft JhengHei";font-size:18px;color:#404040; }
 .post-article .text-info{font-size: 11px; color: #9a9a9a; text-align: center;margin-bottom:40px; }
+.post-article .post-cover {display: block;width: 100%;vertical-align: middle;background-size: cover;background-position: center;}
 .post-article .text{font-size:14px;text-align: -webkit-left; color: #4b4c4c;padding:20px 20px 10px;word-wrap: break-word;}
 .post-article .text .tags-list{ margin-bottom:15px; padding-bottom:15px; width:20%; border-bottom:1px solid #EEE;}
 .post-article .text p{line-height:30px;margin-bottom:0px;font-size: 17px;}
@@ -261,65 +262,7 @@ aside section h2{background:#299982;color:#FFF;padding-left:30px;height:30px;lin
 .author_hide{display:none;}
 #comment_form{position:relative;}
 #edit_author{cursor:pointer;}
-#smilies{z-index:99;cursor:pointer;}
-.smilies-icon,#smilies-box ul,.smilie{display:block;}
-#smilies .dropdown-arrow1{top:28px;}
-#smilies .dropdown-arrow2{top:29px;}
-#smilies-box{top:36px;left:-5px;padding:10px;width:360px;}
-#smilies-box ul li{margin:0 -1px -1px 0;padding:5px;width:25px;height:25px;border:1px solid #eee;}
-#smilies-box ul li:hover{background:#f0f0f0;}
-.smilie,.smilies-icon{width:25px;height:25px;background-image:url(../img/smilies.png);background-repeat:no-repeat;}
-.smilies-icon{width:24px;height:24px;background-position:0 -1495px;}
-.smilie-f1{background-position:0 0;}
-.smilie-f2{background-position:0 -30px;}
-.smilie-f3{background-position:0 -60px;}
-.smilie-f4{background-position:0 -90px;}
-.smilie-f5{background-position:0 -120px;}
-.smilie-f6{background-position:0 -150px;}
-.smilie-f7{background-position:0 -180px;}
-.smilie-f8{background-position:0 -210px;}
-.smilie-f9{background-position:0 -240px;}
-.smilie-f10{background-position:0 -270px;}
-.smilie-f11{background-position:0 -300px;}
-.smilie-f12{background-position:0 -330px;}
-.smilie-f13{background-position:0 -360px;}
-.smilie-f14{background-position:0 -390px;}
-.smilie-f15{background-position:0 -420px;}
-.smilie-f16{background-position:0 -450px;}
-.smilie-f17{background-position:0 -480px;}
-.smilie-f18{background-position:0 -510px;}
-.smilie-f19{background-position:0 -540px;}
-.smilie-f20{background-position:0 -570px;}
-.smilie-f21{background-position:0 -600px;}
-.smilie-f22{background-position:0 -630px;}
-.smilie-f23{background-position:0 -660px;}
-.smilie-f24{background-position:0 -690px;}
-.smilie-f25{background-position:0 -720px;}
-.smilie-f26{background-position:0 -750px;}
-.smilie-f27{background-position:0 -780px;}
-.smilie-f28{background-position:0 -810px;}
-.smilie-f29{background-position:0 -840px;}
-.smilie-f30{background-position:0 -870px;}
-.smilie-f31{background-position:0 -900px;}
-.smilie-f32{background-position:0 -930px;}
-.smilie-f33{background-position:0 -960px;}
-.smilie-f34{background-position:0 -990px;}
-.smilie-f35{background-position:0 -1020px;}
-.smilie-f36{background-position:0 -1050px;}
-.smilie-f37{background-position:0 -1080px;}
-.smilie-f38{background-position:0 -1110px;}
-.smilie-f39{background-position:0 -1140px;}
-.smilie-f40{background-position:0 -1170px;}
-.smilie-f41{background-position:0 -1200px;}
-.smilie-f42{background-position:0 -1230px;}
-.smilie-f43{background-position:0 -1260px;}
-.smilie-f44{background-position:0 -1290px;}
-.smilie-f45{background-position:0 -1320px;}
-.smilie-f46{background-position:0 -1350px;}
-.smilie-f47{background-position:0 -1380px;}
-.smilie-f48{background-position:0 -1410px;}
-.smilie-f49{background-position:0 -1440px;}
-.smilie-f50{background-position:0 -1470px;}
+
 .left{float:left;}
 .right{float:right;}
 .dropdown{position:relative;}
@@ -499,7 +442,7 @@ h1.t_nav a { width: 100px; display: block; text-align: center; color: #fff; floa
 	.m-header-open,.m-container-open,.m-footer-open{left:30% !important;}
 	#m-nav{left:-30%;width:30%;}
 	.post-article .text .tags-list{width:25%}
-	.post-cover {margin: 10px; padding: 0px 40px}
+	
 }
 @media screen and (max-width:750px){
 	.m-header-open,.m-container-open,.m-footer-open{left:50% !important;}
