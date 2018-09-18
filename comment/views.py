@@ -18,7 +18,7 @@ def post_comment(request, post_pk):
                 comment.ifparent = False
             comment.save()
 
-            return HttpResponse('form got')
+            return HttpResponse('comment')
         else:
             return HttpResponse('invalid')
     else:
