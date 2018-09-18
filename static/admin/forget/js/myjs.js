@@ -20,9 +20,9 @@ $(".submit-btn").click(function(){
 //     })
     //$(this).find(".like-img").attr("src":imgurl); 
 //});
-//喜欢文章
+//喜欢文章 
 $(".post-like").click(function(){
-    var url = $("h2").children().attr("href")+"/like";
+    var url = $(".title").children().attr("href")+"/like";
     $(this).load(url,function(data){
     $(".p-like-text").html('已喜欢'); 
     })

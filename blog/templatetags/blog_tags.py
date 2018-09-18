@@ -30,8 +30,8 @@ def get_categories():
     return obj
 
 @register.simple_tag
-def get_tags():
-    obj=Tag.objects.annotate(num_posts=Count('post')).filter(num_posts__gt=0)
+def get_tags(num=4):
+    obj=Tag.objects.annotate(num_posts=Count('post')).filter(num_posts__gt=0)[:num]
     return obj
 
 @register.simple_tag

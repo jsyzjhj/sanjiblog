@@ -6,7 +6,7 @@
 		<div class="main">
 			<article class=" post-article  ">
                 <img src="{{post.cover_pic}}" style="width: 100%;">
-                <h1 class="title">{{post.title}}</h2>
+                <h1 class="title"><a href="{{post.get_absolute_url}}">{{post.title}}</a></h1>
                 <div class="text-info">
                     <div >
                         <a href="{{post.category.get_absolute_url}}">{{post.category}} &bull;</a>
